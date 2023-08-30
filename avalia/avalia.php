@@ -77,7 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['avaliar_curso'])) {
         }
         ?>
     </select>
-</form>
 
 <label for="aula_id">Aula:</label>
 <select id="aula_id" name="aula_id" required>
