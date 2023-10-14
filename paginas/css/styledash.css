@@ -1,0 +1,95 @@
+/* Estilo para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+/* Estilo para o título principal */
+h1 {
+    font-size: 24px;
+}
+
+/* Estilo para os links no menu */
+a.menu-link {
+    display: block;
+    padding: 10px 20px;
+    background-color:#A9A9A9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+    border: 2px solid #A9A9A9;
+}
+
+/* Estilo quando o mouse passa por cima dos links no menu */
+a.menu-link:hover {
+    background-color: #A9A9A9;
+}
+
+/* Estilo específico para o link "Logout" */
+a.logout-link {
+    background-color: #FF6347;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+/* Estilo para os links do painel de controle */
+.control-panel-links {
+    text-align: center;
+}
+
+/* Estilo para os links específicos do painel de controle */
+.control-panel-link {
+    display: block;
+    padding: 10px 20px;
+    background-color: #A9A9A9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo quando o mouse passa por cima dos links do painel de controle */
+.control-panel-link:hover {
+    background-color: #A9A9A9;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para links no rodapé */
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilo para o ícone no rodapé */
+  footer i {
+    margin-right: 5px;
+  }

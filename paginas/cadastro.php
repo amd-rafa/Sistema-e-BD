@@ -4,26 +4,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Inscrições</title>
-    <link rel="stylesheet" href="./css/style.css">
+
+	<link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+	<link rel="stylesheet" href="./css/stylecad.css">
+	
 </head>
 	<body>
-
 	<header>
 		<h1>Plataforma de Aprendizadao Online</h1>
 		<h3>Cadastro de usuários</h3>
 	</header>
-	
-	<br>
 
-	<section>
-		<h2>Preencha os campos abaixo e cadastre-se</h2>
-		<br>
-
-        <section>
     <div  id="area" class="box">
+
+		<h2>Preencha os campos abaixo e cadastre-se</h2>
         <div>
-		<br>
-		<form action="validar.php" method="post" id="usuario" target="" class= "formulario">
+		<form action="./web/main.php" method="post" id="usuario" target="" class= "formulario">
 
 			<label for="usuario">Usuário</label><br>
 			<input type="text" id="usuario" name="usuario" placeholder="Crie um Usuário">
@@ -49,14 +47,15 @@
 			<input type="password" id="senha" name="senha" placeholder="Crie uma senha"><br><br>
 
 			<div class="radio-container">
-                <label class="radio-label" for="prof">Você é?</label>
+                <label class="radio-label" for="prof">Seu usuário será?</label>
                 <input class="radio-input" type="radio" name="prof" value="Aluno">Aluno <span class="radio-input"></span>
                 <input class="radio-input" type="radio" name="prof" value="Professor"> Professor <span class="radio-input"></span>
             </div>
-
-            <input type="submit" name="Cadastrar">
+			<br>
+            <input type="submit" name="cadastrar_usuario">
 </div>
 		</form>
+</div>
 
 	</section>
 	<br>

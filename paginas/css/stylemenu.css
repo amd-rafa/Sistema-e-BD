@@ -1,0 +1,81 @@
+/* Reset de estilos padrão para garantir uma base consistente */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilo para os botões de login e cadastro */
+.login-buttons {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.signup-button, .login-button {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.signup-link, .login-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/* Estilo para o container principal */
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para a seção de conteúdo principal */
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Estilo para o texto com imagem */
+.text-with-image {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+
+/* Estilo para o rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Estilo para links no rodapé */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilo para o ícone no rodapé */
+footer i {
+  margin-right: 5px;
+}

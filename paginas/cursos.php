@@ -1,92 +1,24 @@
-<?php
-session_start();
-// Conexão com o banco de dados
-require_once('conexao.php'); // Substitua pela sua configuração de conexão
-
-$bancoDados = new db();
-$link = $bancoDados->conecta_mysql();
-
-// Cadastrar Categoria
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cadastrar_categoria'])) {
-    $nome_categoria = $_POST['nome_categoria'];
-
-    $sql = "INSERT INTO ct_categoria (nm_categoria, qt_curso) VALUES ('$nome_categoria', 0)";
-    $resultado = mysqli_query($link, $sql);
-
-    if ($resultado) {
-        echo "Categoria cadastrada com sucesso!";
-    } else {
-        echo "Erro ao cadastrar categoria: " . mysqli_error($link);
-    }
-}
-
-// Cadastrar Curso
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cadastrar_curso'])) {
-    $nome_curso = $_POST['nome_curso'];
-    $descricao_curso = $_POST['descricao_curso'];
-    $valor_curso = $_POST['valor_curso'];
-    $categoria_id = $_POST['categoria_id'];
-
-    $sql = "INSERT INTO in_cursos (nm_curso, id_cat, in_descri, vl_valor ) VALUES ('$nome_curso', '$categoria_id', '$descricao_curso', $valor_curso)";
-    $resultado = mysqli_query($link, $sql);
-
-    if ($resultado) {
-        // Atualizar a quantidade de cursos na categoria
-        $update_sql = "UPDATE ct_categoria SET qt_curso = qt_curso + 1 WHERE id_cat = '$categoria_id'";
-        mysqli_query($link, $update_sql);
-
-        echo "Curso cadastrado com sucesso!";
-    } else {
-        echo "Erro ao cadastrar curso: " . mysqli_error($link);
-    }
-}
-
-
-// Cadastrar Aula
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cadastrar_aula'])) {
-    $nome_aula = $_POST['nome_aula'];
-    $curso_id = $_POST['curso_id'];
-    $conteudo_aula = $_POST['conteudo_aula'];
-
-    // Obter o ID do professor logado
-    $usuario_logado = $_SESSION['usuario'];
-    $professor_sql = "SELECT id_prof FROM IN_PROF WHERE cd_usuar = '$usuario_logado'";
-    $professor_resultado = mysqli_query($link, $professor_sql);
-    $id_professor = mysqli_fetch_assoc($professor_resultado)['id_prof'];
-
-    $sql = "INSERT INTO in_aulas (nm_aula, id_curso, id_prof, ds_conteudo) VALUES ('$nome_aula', '$curso_id', '$id_professor', '$conteudo_aula')";
-    $resultado = mysqli_query($link, $sql);
-
-    if ($resultado) {
-        echo "Aula cadastrada com sucesso!";
-    } else {
-        echo "Erro ao cadastrar aula: " . mysqli_error($link);
-    }
-}
-
-
-// Fechar a conexão
-mysqli_close($link);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastrar Curso, Aula e Categoria</title>
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
 </head>
 <body>
     <h1>Cadastrar Categoria</h1>
-    <form method="post">
+    <form method="post" action="./web/main.php">
         <label for="nome_categoria">Nome da Categoria:</label>
         <input type="text" id="nome_categoria" name="nome_categoria" required>
         <input type="submit" name="cadastrar_categoria" value="Cadastrar Categoria">
     </form>
 
     <h1>Cadastrar Curso</h1>
-<form method="post">
+<form method="post" action="./web/main.php">
     <label for="nome_curso">Nome do Curso:</label>
     <input type="text" id="nome_curso" name="nome_curso" required>
 
@@ -100,7 +32,7 @@ mysqli_close($link);
     <select id="categoria_id" name="categoria_id" required>
         <!-- Carregar opções de categorias do banco de dados -->
         <?php
-           require_once('conexao.php'); 
+           require_once('./web/conexao.php'); 
 
            $bancoDados = new db();
            $link = $bancoDados->conecta_mysql();
@@ -123,7 +55,7 @@ mysqli_close($link);
 
 
 <h1>Cadastrar Aula</h1>
-<form method="post">
+<form method="post" action="./web/main.php">
     <label for="nome_aula">Nome da Aula:</label>
     <input type="text" id="nome_aula" name="nome_aula" required>
 
@@ -146,7 +78,7 @@ mysqli_close($link);
     <input type="submit" name="cadastrar_aula" value="Cadastrar Aula">
 </form>
 
-<a href="../login/dashboard.php">Voltar ao Inicio</a>
+<a href="./dashboard.php">Voltar ao Inicio</a>
 
 
 </body>

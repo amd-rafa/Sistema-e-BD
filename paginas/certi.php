@@ -2,7 +2,7 @@
 session_start();
 
 
-require_once('conexao.php');
+require_once('./web/conexao.php');
 
 $bancoDados = new db();
 $link = $bancoDados->conecta_mysql();
@@ -29,6 +29,10 @@ $nomeUsuario = $_GET['user'];
 <!DOCTYPE html>
 <html>
 <head>
+
+    <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
     <title>Certificado</title>
     <style>
        body {
@@ -77,7 +81,7 @@ $nomeUsuario = $_GET['user'];
     </div>
 
     <footer>
-    <a href="../login/dashboard.php">Voltar ao inicio</a>
+    <a href="./dashboard.php">Voltar ao inicio</a>
     </footer>
 
    

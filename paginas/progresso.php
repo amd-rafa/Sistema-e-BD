@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('conexao.php');
+require_once('./web/conexao.php');
 
 $bancoDados = new db();
 $link = $bancoDados->conecta_mysql();
@@ -51,6 +51,11 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
 <html>
 <head>
     <title>Progresso do Usuário</title>
+
+    <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -185,7 +190,7 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
 </form>
 
 <form action="POST">
-    <a href="../login/dashboard.php">Voltar ao inicio.</a>
+    <a href="./dashboard.php">Voltar ao inicio.</a>
 </form>
 
 </body>

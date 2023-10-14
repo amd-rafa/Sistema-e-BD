@@ -1,50 +1,14 @@
-<?php
-session_start();
-require_once('conexao.php'); // Inclua o arquivo de conexão com o banco de dados
-
-$bancoDados = new db();
-$link = $bancoDados->conecta_mysql();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['avaliar_curso'])) {
-    $usuario_logado = $_SESSION['usuario'];
-    $curso_id = $_POST['curso_id'];
-    $aula_id = $_POST['aula_id'];
-    $estrelas = $_POST['estrelas'];
-    $avalia = $_POST['opiniao'];
-
-    // Verifique se o usuário já avaliou este curso/aula
-    $verifica_avaliacao_sql = "SELECT * FROM in_avalia WHERE cd_usuar = '$usuario_logado' AND id_curso = '$curso_id' AND id_aula = '$aula_id'";
-    $verifica_avaliacao_resultado = mysqli_query($link, $verifica_avaliacao_sql);
-
-    if (mysqli_num_rows($verifica_avaliacao_resultado) > 0) {
-        echo "Você já avaliou este curso/aula.";
-    } else {
-        // Obtém o id_prof da aula
-        $professor_sql = "SELECT id_prof FROM in_aulas WHERE id_aula = '$aula_id'";
-        $professor_resultado = mysqli_query($link, $professor_sql);
-        $id_professor = mysqli_fetch_assoc($professor_resultado)['id_prof'];
-
-        $insere_avaliacao_sql = "INSERT INTO in_avalia (cd_usuar, id_aula, id_curso, id_prof, estrela, ds_avalia) VALUES ('$usuario_logado', '$curso_id', '$aula_id', '$id_professor', '$estrelas', '$avalia')";
-        $insere_avaliacao_resultado = mysqli_query($link, $insere_avaliacao_sql);
-
-        if ($insere_avaliacao_resultado) {
-            echo "Avaliação registrada com sucesso!";
-        } else {
-            echo "Erro ao registrar a avaliação: " . mysqli_error($link);
-        }
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Avaliar Curso</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    
     <style>
         /* Estilos para as estrelas de avaliação */
         .stars {
@@ -64,11 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['avaliar_curso'])) {
 </head>
 <body>
 <h1>Avaliar Curso</h1>
-<form method="post">
+<form method="post" action="./web/main.php">
     <label for="curso_id">Curso:</label>
     <select id="curso_id" name="curso_id" required>
         <!-- Carregar opções de cursos do banco de dados -->
         <?php
+         require_once('./web/conexao.php'); 
+
+         $bancoDados = new db();
+         $link = $bancoDados->conecta_mysql();
+
         $cursos_sql = "SELECT id_curso, nm_curso FROM in_cursos";
         $cursos_resultado = mysqli_query($link, $cursos_sql);
 
@@ -92,7 +61,7 @@ document.getElementById('curso_id').addEventListener('change', function() {
 
     // Carregar as opções de aulas com base no curso escolhido
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'carrega_aula.php', true);
+    xhr.open('POST', './web/carrega_aula.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -137,7 +106,7 @@ document.getElementById('curso_id').addEventListener('change', function() {
     });
 </script>
 
-<a href="../login/dashboard.php">Voltar ao Inicio</a>
+<a href="./dashboard.php">Voltar ao Inicio</a>
 
 </body>
 </html>

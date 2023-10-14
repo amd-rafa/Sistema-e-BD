@@ -34,7 +34,7 @@ CREATE TABLE `in_usuar` (
   `sexo` char(1) not null,
   `senha` varchar(255) not null,
   `in_email` varchar(255)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) 
 
 --
 -- Estrutura para tabela `in_cursos`
@@ -124,7 +124,6 @@ CREATE TABLE `in_prof` (
 
 CREATE TABLE `in_progresso` (
   `cd_usuar` varchar(100) NOT NULL,
-  `id_curso` int(11) NOT NULL,
   `qt_curso` int(100) NOT NULL,
   `qt_final` int(100) NOT NULL,
   `qt_iniciado` int(100) not null
