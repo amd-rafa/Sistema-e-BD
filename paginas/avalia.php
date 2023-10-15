@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <link rel="stylesheet" href="./css/styleavalia.css">
+
     
     <style>
         /* Estilos para as estrelas de avaliação */
@@ -27,7 +29,12 @@
     </style>
 </head>
 <body>
-<h1>Avaliar Curso</h1>
+
+<header>
+    <h1>Avaliar Curso</h1>
+</header>
+
+<div class="avalia">
 <form method="post" action="./web/main.php">
     <label for="curso_id">Curso:</label>
     <select id="curso_id" name="curso_id" required>
@@ -106,7 +113,12 @@ document.getElementById('curso_id').addEventListener('change', function() {
     });
 </script>
 
-<a href="./dashboard.php">Voltar ao Inicio</a>
+</div>
+<footer>
+        <a href="./dashboard.php">Voltar ao Inicio</a>
+		<h3>CONTATO: amanda12741@gmail.com</h3>
+		<h3>Desenvolvido por Amanda Beltrão</h3>		
+	</footer>
 
 </body>
 </html>

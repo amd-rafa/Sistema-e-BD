@@ -7,10 +7,17 @@
 
     <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="./css/styleinc.css">
     
 </head>
 <body>
-<h1>Inscrição em Aulas</h1>
+    <header>
+    <h1>Inscrição em Aulas</h1>
+    </header>
+
+
+<div class="inscricao">
 <form method="post" action="./web/main.php">
     <label for="curso_id">Curso:</label>
     <select id="curso_id" name="curso_id" required>
@@ -56,8 +63,16 @@
     </script>
 
     <input type="submit" name="inscrever" value="Inscrever-se">
-</form>
 
-<a href="./dashboard.php">Voltar ao Inicio.</a>
+   
+</form>
+</div>
+
+<footer>
+        <a href="./dashboard.php">Voltar ao Inicio</a>
+		<h3>CONTATO: amanda12741@gmail.com</h3>
+		<h3>Desenvolvido por Amanda Beltrão</h3>		
+	</footer>
+
 </body>
 </html>

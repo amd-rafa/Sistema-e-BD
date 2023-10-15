@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Estilo para a div .certificado */
+.certificado {
+    background-color: #ffff;
+    padding: 20px;
+    margin: 10px;
+    border: 3.5px solid #000000;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.certificado h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.certificado p {
+    font-size: 18px;
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.certificado h2 {
+    font-size: 28px;
+    color: #4CAF50;
+}
+
+/* Espaçamento entre elementos */
+.certificado br {
+    margin: 10px 0;
+}
+
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo para o link dentro do rodapé */
+footer a {
+    color: #F5FFFA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o link dentro do rodapé quando recebe foco */
+footer a:focus {
+    outline: 2px solid #333; /* Adicione uma borda quando o link recebe foco */
+}
+    
+
+/* Estilo para o ícone no rodapé */
+footer i {
+    margin-right: 5px;
+}
+
+

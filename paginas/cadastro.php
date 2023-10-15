@@ -52,7 +52,10 @@
                 <input class="radio-input" type="radio" name="prof" value="Professor"> Professor <span class="radio-input"></span>
             </div>
 			<br>
-            <input type="submit" name="cadastrar_usuario">
+			<div>
+			<input type="submit" name="cadastrar_usuario">
+			</div>
+          
 </div>
 		</form>
 </div>

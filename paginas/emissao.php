@@ -14,9 +14,15 @@ $link = $bancoDados->conecta_mysql();
     <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
+    <link rel="stylesheet" href="./css/styleemit.css">
 </head>
 <body>
-<p>Bem-vindo, <?php echo $_SESSION['usuario']; ?></p>
+    <header>
+    <h1>Emissão de Certificado  </h1>
+    <p>Bem-vindo, <?php echo $_SESSION['usuario']; ?></p>
+    </header>
+
+    <div class="certificado">
     <h2>Selecione o Curso para Emitir o Certificado</h2>
     <form method="post" action="./web/main.php">
         <select id="curso_id" name="curso_id" required>
@@ -35,5 +41,11 @@ $link = $bancoDados->conecta_mysql();
         </select>
         <input type="submit" name="emitir_certi" value="Emitir">
     </form>
+        </div>
+    <footer>
+        <a href="./dashboard.php">Voltar ao Inicio</a>
+		<h3>CONTATO: amanda12741@gmail.com</h3>
+		<h3>Desenvolvido por Amanda Beltrão</h3>		
+	</footer>
 </body>
 </html>

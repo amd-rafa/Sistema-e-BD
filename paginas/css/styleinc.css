@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Estilo para a div de inscrição */
+.inscricao {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.inscricao form {
+    margin: 0;
+    padding: 0;
+}
+
+.inscricao label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.inscricao select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inscricao input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo para o link dentro da inscrição, se aplicável */
+.inscricao a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo para o link dentro do rodapé */
+footer a {
+    color: #F5FFFA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o link dentro do rodapé quando recebe foco */
+footer a:focus {
+    outline: 2px solid #333; /* Adicione uma borda quando o link recebe foco */
+}
+    
+
+/* Estilo para o ícone no rodapé */
+footer i {
+    margin-right: 5px;
+}
+
+

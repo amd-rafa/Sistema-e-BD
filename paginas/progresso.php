@@ -55,57 +55,11 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
     <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        h2 {
-            margin-top: 20px;
-        }
-
-        form {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-        }
-
-        select {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        button {
-            padding: 8px 12px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 3px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        textarea {
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styleprog.css">
 
 </head>
 <body>
+    <header>
     <h2>Seu Progresso</h2>
     <?php
     if ($progresso) {
@@ -123,7 +77,10 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
         echo "Não há cursos iniciados/finalizados.";
     }
     ?>
+
+    </header>
     
+    <div class="inicio">
     <h2>Iniciar Curso</h2>
     <form method="post">
     <select id="curso_id" name="curso_id" required>
@@ -142,7 +99,9 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
     </select>
     <button type="submit" name="iniciar_curso">Iniciar</button>
     </form>
+        </div>
 
+    <div class="finaliza">
     <h2>Finalizar Curso</h2>
     <form method="post">
     <select id="curso_id" name="curso_id" required>
@@ -162,7 +121,9 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
         <button type="submit" name="finalizar_curso">Finalizar</button>
 
     </form>
+        </div>
 
+<div class="comentario">
     <h2>Enviar Comentário</h2>
     <form method="post">
     <select id="aula_id" name="aula_id" required>
@@ -188,10 +149,13 @@ $progresso = mysqli_fetch_assoc($progresso_resultado);
     <br>
     <button type="submit" name="enviar_comentario">Enviar</button>
 </form>
+    </div>
 
-<form action="POST">
-    <a href="./dashboard.php">Voltar ao inicio.</a>
-</form>
+<footer>
+        <a href="./dashboard.php">Voltar ao Inicio</a>
+		<h3>CONTATO: amanda12741@gmail.com</h3>
+		<h3>Desenvolvido por Amanda Beltrão</h3>		
+	</footer>
 
 </body>
 </html>

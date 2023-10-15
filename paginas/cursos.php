@@ -7,17 +7,27 @@
 
     <link rel="shortcut icon" href="https://ambienteonline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="./css/stylecat.css">
     
 </head>
 <body>
-    <h1>Cadastrar Categoria</h1>
+    
+    <header>
+        <h1>Página de cadastro de Categorias, Cursos e aulas</h1>
+    </header>
+
+<div class="categorias">
+    <h2>Cadastrar Categoria</h2>
     <form method="post" action="./web/main.php">
         <label for="nome_categoria">Nome da Categoria:</label>
         <input type="text" id="nome_categoria" name="nome_categoria" required>
         <input type="submit" name="cadastrar_categoria" value="Cadastrar Categoria">
     </form>
+</div>
 
-    <h1>Cadastrar Curso</h1>
+<div class="cursos">
+    <h2>Cadastrar Curso</h2>
 <form method="post" action="./web/main.php">
     <label for="nome_curso">Nome do Curso:</label>
     <input type="text" id="nome_curso" name="nome_curso" required>
@@ -52,9 +62,10 @@
 
     <input type="submit" name="cadastrar_curso" value="Cadastrar Curso">
 </form>
+    </div>
 
-
-<h1>Cadastrar Aula</h1>
+<div class="aulas">
+<h2>Cadastrar Aula</h2>
 <form method="post" action="./web/main.php">
     <label for="nome_aula">Nome da Aula:</label>
     <input type="text" id="nome_aula" name="nome_aula" required>
@@ -77,9 +88,15 @@
 
     <input type="submit" name="cadastrar_aula" value="Cadastrar Aula">
 </form>
+    </div>
 
-<a href="./dashboard.php">Voltar ao Inicio</a>
 
+
+<footer>
+        <a href="./dashboard.php">Voltar ao Inicio</a>
+		<h3>CONTATO: amanda12741@gmail.com</h3>
+		<h3>Desenvolvido por Amanda Beltrão</h3>		
+	</footer>
 
 </body>
 </html>

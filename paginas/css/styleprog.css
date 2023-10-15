@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Estilo para a div .inicio */
+.inicio {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.inicio h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.inicio form {
+    margin: 0;
+    padding: 0;
+}
+
+.inicio select, .inicio button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para a div .finaliza */
+.finaliza {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.finaliza h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.finaliza form {
+    margin: 0;
+    padding: 0;
+}
+
+.finaliza select, .finaliza button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para a div .comentario */
+.comentario {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.comentario h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.comentario form {
+    margin: 0;
+    padding: 0;
+}
+
+.comentario select, .comentario textarea, .comentario button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo para o link dentro do rodapé */
+footer a {
+    color: #F5FFFA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o link dentro do rodapé quando recebe foco */
+footer a:focus {
+    outline: 2px solid #333; /* Adicione uma borda quando o link recebe foco */
+}
+    
+
+/* Estilo para o ícone no rodapé */
+footer i {
+    margin-right: 5px;
+}
+
+
