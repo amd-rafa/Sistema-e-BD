@@ -8,6 +8,14 @@
     <title>Meu Site</title>
     <link rel="shortcut icon" href="https://ambienteo   nline.uninga.br/pluginfile.php/1/theme_moove/favicon/1695711618/favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Inclua o Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Inclua o Bootstrap JavaScript e o jQuery (opcional) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 
     <link rel="stylesheet" href="./paginas/css/stylemenu.css">
     

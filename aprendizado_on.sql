@@ -20,12 +20,15 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `aprendizado_on`
 --
+ -- Create database aprendizado_on;
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura para tabela `in_usuar`
 --
+
+
 USE aprendizado_on;
 CREATE TABLE `in_usuar` (
   `cd_usuar` varchar(100) NOT NULL,
@@ -34,7 +37,7 @@ CREATE TABLE `in_usuar` (
   `sexo` char(1) not null,
   `senha` varchar(255) not null,
   `in_email` varchar(255)
-) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Estrutura para tabela `in_cursos`
